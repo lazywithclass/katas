@@ -27,34 +27,11 @@ const set = (_, key, value) => {
 };
 
 const json = (_) => {
-  return _
-    .replace(/@/g, ',')
-    .replace(/,/, '{') // only the first
-    + '}';
+  // lol
+  return _;
 };
 
 
 // console.log(get('{"key":"value","key2":"value2"}', 'key'));
 // console.log(set('{"key":"value","key2":"value2"}', 'key3', 'value3'));
-console.log(set('{"key":"value","key2":"value2"}', 'key', 'hellow'));
-
-
-// var normal = {};
-// for (let i = 0; i < 10000; i++) {
-//   const now = new Date().getTime();
-//   normal[now] = now;
-// }
-// console.time('normal');
-// const resultNormal = JSON.stringify(normal);
-// console.timeEnd('normal');
-
-// var silly = '';
-// for (let i = 0; i < 10000; i++) {
-//   const now = new Date().getTime();
-//   silly = silly.concat('@' + '"' + now + '":' + '"' + now + '"');
-// }
-// console.time('silly');
-// const resultSilly = json(silly);
-// console.timeEnd('silly');
-
-// // silly indeed
+// console.log(set('{"key":"value","key2":"value2"}', 'key', 'hellow'));
