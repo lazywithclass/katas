@@ -1,8 +1,15 @@
+// if the two TODOs prove true then we should
+// think about having a side lookup data structure
+// the focus is having a set and get faster or comparable
+// to hashmap and a json conversion that takes 0
+
 const init = () => {
   return '';
 };
 
 const get = (_, key) => {
+  // TODO or is it just faster to JSON.parse and
+  // get that? lol
   const obj = _.split(/,/).find((pair) => {
     return pair.indexOf(key) > -1;
   });
@@ -10,6 +17,8 @@ const get = (_, key) => {
 };
 
 const set = (_, key, value) => {
+  // TODO or is it just faster to JSON.parse and
+  // set that? lol
   const index = _.indexOf(key + '":'), keyFound = index > -1;
   if (keyFound) {
     const obj = get(_, key);
