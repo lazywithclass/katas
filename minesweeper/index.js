@@ -2,6 +2,8 @@
 let isBomb = (x, y, field) => field[x] && field[x][y] === '*';
 
 let increase = (x, y, field) => {
+  if (isBomb(x, y, field)) return;
+
   // clockwise check positions for bomb
   // starting from top left (x-1, y+1)
 
@@ -29,21 +31,9 @@ let loop = field => {
   return field;
 };
 
-let print = field => {
-  let x, y;
-  for (x = 0; x < field.length; x++) {
-    for (y = 0; y < field[x].length; y++) {
-      process.stdout.write(''+field[x][y]);
-    }
-    process.stdout.write('\n');
-  }
+let processInput = (input) => input.map((line) => line.split(''));
+
+module.exports = (input) => {
+  let result = loop(processInput(input)); 
+  return result.map((r) => r.join('')).join('\n');
 };
-
-var input = [
-  [ '*', '.', '.', '.' ],
-  [ '.', '.', '.', '.' ],
-  [ '.', '*', '.', '.' ],
-  [ '.', '.', '.', '.' ]
-];
-
-print(loop(input));

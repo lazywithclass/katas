@@ -1,6 +1,6 @@
 ## Minesweeper
 
-As shown in http://www.programming-challenges.com/pg.php?page=downloadproblem&probid=110102&format=html
+[Problem page](http://www.programming-challenges.com/pg.php?page=downloadproblem&probid=110102&format=html), [sample inputs and expected outputs](https://www.udebug.com/UVa/10189)
 
 Have you ever played Minesweeper? This cute little game comes with a certain 
 operating system whose name we can't remember. The goal of the game is to 
@@ -40,6 +40,7 @@ to that square. There must be an empty line between field outputs.
 
 ### Sample Input
 
+```
 4 4
 *...
 ....
@@ -50,16 +51,21 @@ to that square. There must be an empty line between field outputs.
 .....
 .*...
 0 0
+```
 
 ### Sample Output
 
+```
 Field #1:
 *100
 2210
 1*10
 1110
+```
 
+```
 Field #2:
 **100
 33200
 1*100
+```
