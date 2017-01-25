@@ -1,4 +1,10 @@
 function main(i, j) {
+  if (i > j) {
+    let tmp = i;
+    i = j;
+    j = tmp;
+  }
+
   var maxCycles = 0;
   while (i <= j) {
     var cycles = countCycles(i, 1);
@@ -15,7 +21,4 @@ function countCycles(n, count) {
     countCycles((n * 3) + 1, count + 1);
 }
 
-module.exports = {
-  main: main,
-  countCycles: countCycles
-};
+module.exports = main;

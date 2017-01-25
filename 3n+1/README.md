@@ -1,6 +1,6 @@
 ## 3n+1 
 
-As shown in http://www.programming-challenges.com/pg.php?page=downloadproblem&probid=110101&format=html
+[Problem page](http://www.programming-challenges.com/pg.php?page=downloadproblem&probid=110101&format=html), [sample inputs and expected outputs](https://www.udebug.com/UVa/100)
 
 Consider the following algorithm to generate a sequence of numbers. Start with an integer n. If n is even, divide by 2.
 If n is odd, multiply by 3 and add 1. Repeat this process with the new value of n, terminating when n = 1. 

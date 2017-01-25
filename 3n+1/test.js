@@ -1,37 +1,22 @@
 describe('3n+1', function() {
 
   var lib = require('./index.js'),
-      expect = require('chai').expect;
+      expect = require('chai').expect,
+      fs = require('fs');
 
-  describe('countCycles', function() {
-
-    it('works', function() {
-      var cycles = lib.countCycles(1, 1);
-      expect(cycles).to.equal(1);
-      
-      cycles = lib.countCycles(12, 1);
-      expect(cycles).to.equal(10);
-
-      cycles = lib.countCycles(27, 1);
-      expect(cycles).to.equal(112);
-    });
-
-  });
-
-  describe('main', function() {
+  describe('3n+1', function() {
 
     it('works', function() {
-      var cycles = lib.main(1, 10);
-      expect(cycles).to.equal(20);
+      let input = fs.readFileSync('./input').toString().split('\n'),
+          output = fs.readFileSync('./output').toString().split('\n');
 
-      cycles = lib.main(100, 200);
-      expect(cycles).to.equal(125);
+      input.forEach((row, i) => {
+        let values = row.split(' ');
+        let result = lib(values[0], values[1]);
 
-      cycles = lib.main(201, 210);
-      expect(cycles).to.equal(89);
-
-      cycles = lib.main(900, 1000);
-      expect(cycles).to.equal(174);
+        let expected = parseInt(output[i].split(' ')[2], 10);
+        expect(result).to.equal(expected);
+      });
     });
 
   });
