@@ -29,14 +29,18 @@ should be separated by one space, with all three numbers on one line and with on
 
 Sample Input
 
+```
 1 10
 100 200
 201 210
 900 1000
+```
 
 Sample Output
 
+```
 1 10 20
 100 200 125
 201 210 89
 900 1000 174
+```
