@@ -1,4 +1,4 @@
-# JavaScript katas
+## Katas
 
 What to work on:
 
